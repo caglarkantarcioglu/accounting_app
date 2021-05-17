@@ -1,0 +1,9 @@
+<app-preloader *ngIf="loading"></app-preloader>
+<div matRipple
+     [matRippleCentered]="false"
+     [matRippleDisabled]="false"
+     [matRippleUnbounded]="true"
+     [matRippleRadius]="30"
+     [matRippleColor]="'rgba(0,0,100,0.3)'">
+  <router-outlet></router-outlet>
+</div>

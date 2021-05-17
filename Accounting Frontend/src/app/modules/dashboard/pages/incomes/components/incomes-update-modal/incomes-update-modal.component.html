@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Ödemeyi Güncelle</h1>
+<div mat-dialog-content class="mx-auto text-center">
+  <form class=" form mx-auto" [formGroup]="form">
+    <mat-form-field class="my-2">
+      <mat-label>Başlık</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="my-2">
+      <mat-label>Açıklama</mat-label>
+      <input matInput formControlName="content">
+    </mat-form-field>
+    <mat-form-field class="my-2">
+      <mat-label>Fiyat</mat-label>
+      <input type="number" matInput formControlName="price">
+      <span matPrefix>₺&nbsp;</span>
+    </mat-form-field>
+    <mat-form-field class="my-2">
+      <mat-label>Tarih</mat-label>
+      <input type="date" matInput formControlName="date">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button style="margin-left: auto" mat-flat-button color="warn" [mat-dialog-close]="false">İptal</button>
+  <button [disabled]="form.invalid" mat-flat-button color="primary" (click)="update()" [mat-dialog-close]="true"
+          cdkFocusInitial>Güncelle
+  </button>
+</div>

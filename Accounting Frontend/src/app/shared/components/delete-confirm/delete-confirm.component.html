@@ -1,0 +1,10 @@
+<div mat-dialog-content class="mx-auto text-center my-5">
+  <p style="font-size: x-large">Silmek istediğine emin misin ?</p>
+  <p style="font-size: small; color: dimgray">Bu işlem geri alınamaz!</p>
+</div>
+<div mat-dialog-actions>
+  <button style="margin-left: auto" mat-flat-button color="primary" [mat-dialog-close]="false">İptal</button>
+  <button mat-flat-button color="warn" [mat-dialog-close]="true"
+          cdkFocusInitial>Sİl
+  </button>
+</div>

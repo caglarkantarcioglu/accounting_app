@@ -1,0 +1,40 @@
+<mat-card class="invoice-card p-4 text-center">
+  <mat-card-header style="display: flex; align-items: center; justify-content: center">
+    <mat-card-title>{{invoice.expense ? invoice.expense.title : invoice.income.title}}</mat-card-title>
+    <mat-card-subtitle class="my-2">{{
+      invoice.expense ? invoice.expense.content : invoice.income.content
+      }}</mat-card-subtitle>
+  </mat-card-header>
+  <p>
+    <mat-icon
+      style="font-size: 150px; margin-right: 50%"
+      [color]="!invoice.expense? 'primary' : 'warn'">
+      description
+    </mat-icon>
+  </p>
+  <mat-card-content>
+    <p>
+      {{
+      invoice.expense ?
+        invoice.expense.date.split('-')[2].split('T')[0] +
+        '/' +
+        invoice.expense.date.split('-')[1] +
+        '/' +
+        invoice.expense.date.split('-')[0]
+        :
+        invoice.income.date.split('-')[2].split('T')[0] +
+        '/' +
+        invoice.income.date.split('-')[1] +
+        '/' +
+        invoice.income.date.split('-')[0]}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="openInvoice(invoice.id)">
+      <mat-icon>launch</mat-icon>
+    </button>
+    <button (click)="deleteInvoice(invoice.id)" mat-button>
+      <mat-icon>clear</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

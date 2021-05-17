@@ -1,0 +1,25 @@
+<div class="row p-5 fadeInDown">
+  <div class="col-10 my-5 mx-auto">
+    <div class="col-6 my-5 login-area mx-auto">
+      <h1 class="text-center">Swift Accountancy</h1>
+      <form class="form mt-5 text-center" [formGroup]="form" (ngSubmit)="login()">
+        <mat-form-field class="mt-5" appearance="outline">
+          <mat-label>Kullanıcı Adı</mat-label>
+          <input formControlName="username" matInput>
+          <mat-icon matSuffix>account_box</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="mt-3" appearance="outline">
+          <mat-label>Şifre</mat-label>
+          <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <button [disabled]="form.invalid" class="btn btn-primary my-3" type="submit">Giriş Yap</button>
+        <p class="mat-slider-thumb-label-text mt-5">Hesabınız Yok Mu ?</p>
+        <button routerLink="/register" class="btn btn-danger" type="button">Kaydol</button>
+      </form>
+    </div>
+  </div>
+</div>

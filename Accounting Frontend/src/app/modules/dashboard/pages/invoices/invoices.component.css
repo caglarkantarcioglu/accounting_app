@@ -1,0 +1,18 @@
+:host {
+  display: contents;
+}
+
+.invoices-cards-area {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+
+.col-10 {
+  height: 100%;
+}
+
+.invoices-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-12">
+    <app-page-header [routeName]="'Faturalar'"></app-page-header>
+  </div>
+  <div class="col-10 mx-auto">
+    <div class="col-10 invoices-cards-area p-5 my-5 mx-auto">
+      <div class="search-box"></div>
+      <div class="row invoices-cards">
+        <div class="col-3 mx-5 my-5" *ngFor="let invoice of invoices">
+          <app-invoice-card [invoice]="invoice"></app-invoice-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="space my-5"></div>
+</div>

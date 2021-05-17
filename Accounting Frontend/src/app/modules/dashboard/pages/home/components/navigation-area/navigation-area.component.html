@@ -1,0 +1,31 @@
+<div class="row my-5">
+  <div class="col-sm-10 nav-area"
+       style="background-color: rgba(0,0,0,0.8); border-radius: 20px; width: auto; backdrop-filter: blur(20px)">
+    <div class="row my-3">
+      <div class="nav-tab mx-5 my-5"
+           style="background-image: url('https://images.unsplash.com/photo-1565514158740-064f34bd6cfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80')">
+        <a class="nav-btn" (click)="routeService.slideRoute(['expenses'])">
+          Ödemeler
+        </a>
+      </div>
+      <div class="nav-tab mx-5 my-5"
+           style="background-image: url('https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80')">
+        <a class="nav-btn" (click)="routeService.slideRoute(['incomes'])">
+          Gelirler
+        </a>
+      </div>
+      <div class="nav-tab mx-5 my-5"
+           style="background-image: url('https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80')">
+        <a class="nav-btn" (click)="routeService.slideRoute(['invoices'])">
+          Faturalar
+        </a>
+      </div>
+      <div class="nav-tab mx-5 my-5"
+           style="background-image: url('https://images.unsplash.com/photo-1586282391129-76a6df230234?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+        <a class="nav-btn" (click)="routeService.slideRoute(['user'])">
+          Ayarlar
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

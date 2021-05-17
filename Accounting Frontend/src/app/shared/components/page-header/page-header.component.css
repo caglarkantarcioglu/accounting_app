@@ -1,0 +1,30 @@
+:host {
+  display: contents;
+}
+
+mat-icon {
+  color: white;
+  font-size: xx-large;
+  margin-right: auto;
+}
+
+.container {
+  width: 100% !important;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.page-text {
+  font-size: xx-large;
+}
+
+.page-header-body {
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: large;
+  text-align: center;
+  width: 100%;
+}

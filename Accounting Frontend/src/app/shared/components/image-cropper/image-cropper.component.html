@@ -1,0 +1,21 @@
+<div mat-dialog-content class="dialog-content mx-auto text-center">
+  <div class="cropper">
+    <image-cropper class="image-cropper"
+                   [imageChangedEvent]="imageChangedEvent"
+                   [maintainAspectRatio]="true"
+                   alignImage="center"
+                   [aspectRatio]="5 / 5"
+                   format="jpg"
+                   (imageCropped)="imageCropped($event)"
+                   (imageLoaded)="imageLoaded()"
+                   (cropperReady)="cropperReady()"
+                   (loadImageFailed)="loadImageFailed()"></image-cropper>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button style="margin-left: auto" mat-flat-button color="warn" [mat-dialog-close]>İptal</button>
+  <button mat-flat-button color="primary" (click)="upload()" [mat-dialog-close] cdkFocusInitial>Kaydet
+  </button>
+</div>
+
+

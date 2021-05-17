@@ -1,0 +1,40 @@
+:host {
+  display: contents;
+}
+
+.icon {
+  margin-right: auto;
+}
+
+mat-icon {
+  color: dodgerblue;
+  font-size: xxx-large;
+}
+
+.user-info-card {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+}
+
+.user-image {
+  border-radius: 100%;
+}
+
+.user-info {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: large;
+  box-shadow: 10px 12px 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.info-text {
+  margin-right: auto;
+  color: white;
+  font-size: x-large;
+}
+

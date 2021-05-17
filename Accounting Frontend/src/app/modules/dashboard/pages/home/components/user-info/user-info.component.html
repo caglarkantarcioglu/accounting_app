@@ -1,0 +1,30 @@
+<div class="row p-5 text-center">
+  <div class="col-12 col-lg-6 mx-auto">
+    <div class="row user-info-card">
+      <div class="col-lg-3 col-10 my-3">
+        <img [src]="userService.user.profile_image" width="100%"
+             height="auto"
+             class="user-image mx-auto">
+      </div>
+      <div class="col-lg-8 col-12">
+        <div class="user-info col-lg-12 col-sm-12 my-5 mx-auto">
+          <p class="icon">
+            <mat-icon>person</mat-icon>
+          </p>
+          <p class="info-text">
+            {{userService.user.firstName + ' ' + userService.user.lastName}}
+          </p>
+        </div>
+        <div class="user-info col-lg-12 col-sm-12 my-5 mx-auto">
+          <p class="icon">
+            <mat-icon>savings</mat-icon>
+          </p>
+          <p class="info-text">
+            {{userService.user.money}}₺
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

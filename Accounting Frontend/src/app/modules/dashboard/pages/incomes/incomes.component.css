@@ -1,0 +1,102 @@
+:host {
+  display: contents;
+}
+
+.row {
+  min-height: 1000px;
+}
+
+
+table {
+  text-align: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+th, th.mat-header-cell {
+  max-width: 200px !important;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+}
+
+td {
+  max-width: 150px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+
+.chart-area {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+
+.chart-close {
+  color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  padding-top: 0 !important;
+}
+
+.chart-close mat-icon {
+  font-size: xxx-large;
+  margin-left: auto !important;
+}
+
+
+.tabs-area {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+
+.tabs {
+  width: 100%;
+  background-color: rgba(0, 150, 200, 0.8);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tab {
+  color: white;
+}
+
+.tab:focus {
+  border: 2px solid white !important;
+}
+
+.actions .btn {
+  width: 100%;
+}
+
+
+.paginator {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.mat-expansion-panel {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: white !important;
+}
+
+.mat-paginator {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.mat-expansion-panel-header-title {
+  color: white !important;
+  font-size: large !important;
+}
+
+
+
+
+
+

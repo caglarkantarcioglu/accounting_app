@@ -1,0 +1,29 @@
+:host {
+  display: contents;
+}
+
+.login-area {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white !important;
+  height: 100%;
+  border-radius: 20px;
+  padding: 60px;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+
+mat-label {
+  color: white;
+}
+
+mat-form-field {
+  width: 60%;
+}
+
+.btn-primary {
+  width: 50%;
+}
+.btn-danger{
+  width: 30%;
+}

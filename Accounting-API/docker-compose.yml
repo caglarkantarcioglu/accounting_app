@@ -1,0 +1,26 @@
+version: '3.6'
+
+volumes:
+  postgresqlaa_db:
+    name: 'aa_psql_vlm'
+
+networks:
+  aa_network:
+    name: 'aa_network'
+
+services:
+  postgresqlaa_db:
+    image: postgres
+    container_name: aa_postgresql
+    restart: always
+    volumes:
+      - postgresqlaa_db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: accounting
+    ports:
+      - 6789:5432
+    networks:
+      - aa_network
+

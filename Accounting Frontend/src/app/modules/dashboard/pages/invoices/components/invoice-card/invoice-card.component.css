@@ -1,0 +1,17 @@
+:host {
+  display: contents;
+}
+
+.invoice-card {
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 20px;
+  color: white !important;
+}
+
+.mat-card-subtitle {
+  color: white;
+}
+
+.mat-card-header {
+  text-align: center;
+}

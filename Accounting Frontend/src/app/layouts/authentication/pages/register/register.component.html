@@ -1,0 +1,50 @@
+<div class="row p-5 fadeInDown">
+  <div class="col-10 mx-auto">
+    <div class="col-6 my-4 register-area mx-auto">
+      <button mat-icon-button routerLink="login">
+        <mat-icon class="back-icon">arrow_back_ios</mat-icon>
+      </button>
+      <h1 class="text-center">
+        Swift Accountancy</h1>
+      <form class="form mt-5" style="text-align: center;" [formGroup]="form" (ngSubmit)="register()">
+        <mat-form-field appearance="outline">
+          <mat-label>Kullanıcı Adı</mat-label>
+          <input formControlName="username" matInput>
+          <mat-icon matSuffix>badge</mat-icon>
+          <mat-error>Lütfen 5 Karakterden Büyük Geçerli Bir Kullanıcı Adı Giriniz</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>İsim</mat-label>
+          <input formControlName="firstName" matInput>
+          <mat-icon matSuffix>account_box</mat-icon>
+          <mat-error>Bu Alan Zorunludur</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Soyisim</mat-label>
+          <input formControlName="lastName" matInput>
+          <mat-icon matSuffix>account_box</mat-icon>
+          <mat-error>Bu Alan Zorunludur</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>E-posta</mat-label>
+          <input matInput type="email" formControlName="email" required>
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-error>Lütfen Geçerli bir Email Giriniz</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Şifre</mat-label>
+          <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="true">Lütfen 5 Karakterden Büyük Geçerli Bir Şifre Giriniz !</mat-error>
+        </mat-form-field>
+        <button [disabled]="form.invalid" class="btn btn-primary mt-5" type="submit" (click)="register()"
+                color="primary">Kayıt Ol
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+

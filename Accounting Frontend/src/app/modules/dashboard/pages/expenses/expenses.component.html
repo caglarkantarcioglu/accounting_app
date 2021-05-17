@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="col-12">
+    <app-page-header [routeName]="'Ödemeler'"></app-page-header>
+  </div>
+  <div class="col-lg-10 col-12 mx-auto">
+    <div class="chart-area fadeInDown p-2" *ngIf="grahpOpen">
+      <div class="chart-close p-4">
+        <p class="my-3" style="font-size: large">Ödemeler Grafiği ({{date.getFullYear()}})</p>
+        <mat-icon (click)="grahpOpen = false">clear</mat-icon>
+      </div>
+      <div class="chart-body p-3">
+        <app-chart-graphics></app-chart-graphics>
+      </div>
+    </div>
+    <div class="col-lg-10 col-12 tabs-area p-5 mx-auto my-5 text-center">
+      <div class="tabs-body">
+        <div class="actions">
+          <button [disabled]="grahpOpen" (click)="openGraphic()" class="btn btn-danger mx-auto mb-5">
+            Grafik Oluştur
+          </button>
+          <button (click)="openCreateModal()" class="btn btn-success mx-auto mb-5">Yeni Ödeme Oluştur
+          </button>
+        </div>
+        <div class="tabs text-center p-2">
+          <button (click)="expenseService.getExpenses(0); selectIndex = 0" class="btn mx-5 tab">Bu Gün</button>
+          <button (click)="expenseService.getExpenses(1); selectIndex = 1" class="btn mx-5 tab">Bu Ay</button>
+          <button (click)="expenseService.getExpenses(2); selectIndex = 2" class="btn mx-5 tab">Tüm Zamanlar</button>
+        </div>
+        <table mat-table [dataSource]="expenses">
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> Başlık</th>
+            <td mat-cell *matCellDef="let element">{{element.title}}</td>
+          </ng-container>
+          <ng-container matColumnDef="content">
+            <th mat-header-cell *matHeaderCellDef> İçerik</th>
+            <td mat-cell *matCellDef="let element">{{element.content}}</td>
+          </ng-container>
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Fiyat</th>
+            <td mat-cell *matCellDef="let element"> {{element.price}}₺</td>
+          </ng-container>
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> Tarih</th>
+            <td mat-cell *matCellDef="let element">
+              {{
+              element.date.split('-')[2].split('T')[0] +
+              '/' +
+              element.date.split('-')[1] +
+              '/' +
+              element.date.split('-')[0]
+              }}
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="invoice">
+            <th mat-header-cell *matHeaderCellDef>Fatura</th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-icon-button color="primary" (click)="openInvoice(element.invoice.id)"
+                      *ngIf="element.invoice">
+                <mat-icon>description</mat-icon>
+              </button>
+              <button mat-icon-button color="primary" (click)="openUpdateModal(element)"
+                      *ngIf="!element.invoice">
+                <mat-icon>add</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="update">
+            <th mat-header-cell *matHeaderCellDef>Güncelle</th>
+            <td mat-cell *matCellDef="let element">
+              <button (click)="openUpdateModal(element)" mat-icon-button color="warn">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef>Sil</th>
+            <td mat-cell *matCellDef="let element">
+              <button (click)="deleteExpense(element.id)" mat-icon-button>
+                <mat-icon>clear</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+        </table>
+        <mat-paginator class="paginator" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+    </div>
+  </div>
+  <div class="space my-5"></div>
+</div>

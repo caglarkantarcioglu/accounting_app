@@ -1,0 +1,41 @@
+:host {
+  display: contents;
+}
+
+.settings-area {
+  /*background-image: linear-gradient(160deg, #98dcff 0%, #80D0C7 100%); */
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  border-radius: 50px;
+}
+
+.update-photo-icon {
+  position: absolute;
+  font-size: xxx-large;
+  color: white;
+}
+
+.user-image {
+  border-radius: 100%;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
+}
+
+.form {
+  color: white !important;
+  display: block;
+  text-align: center;
+}
+
+.mat-form-field {
+  font-size: large;
+  margin-bottom: 20px;
+  color: white !important;
+  width: 60%;
+}
+
+mat-label {
+  color: white !important;
+}
+
+

@@ -1,0 +1,32 @@
+:host {
+  display: contents;
+}
+
+.row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.nav-tab {
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  padding: 0;
+}
+
+.nav-btn {
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  font-size: xx-large;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

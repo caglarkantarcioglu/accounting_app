@@ -1,0 +1,41 @@
+<div class="row fadeInDown">
+  <div class="col-12">
+    <app-page-header [routeName]="'Profil Ayarları'"></app-page-header>
+  </div>
+  <div class="col-6 mx-auto">
+    <div class="settings-area p-5 mx-auto my-5">
+      <div class="col-4 mx-auto my-3">
+        <img class="user-image"
+             width="100%"
+             height="auto"
+             [src]="profilePicture">
+        <mat-icon (click)="selectFile()" class="update-photo-icon">add_a_photo</mat-icon>
+        <input (change)="fileChange($event)" type="file" class="d-none" id="user-image">
+      </div>
+      <form [formGroup]="form" (ngSubmit)="updateUser()" class="form mx-auto p-4">
+        <mat-form-field appearance="outline">
+          <mat-label>İsim</mat-label>
+          <input formControlName="firstName" matInput>
+          <mat-icon matSuffix>title</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Soyisim</mat-label>
+          <input formControlName="lastName" matInput>
+          <mat-icon matSuffix>title</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>E-posta</mat-label>
+          <input formControlName="email" matInput>
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+        <button type="submit" [disabled]="form.untouched || form.invalid" style="width: 60%"
+                class="btn btn-lg btn-primary mx-auto p-2">Değişiklikleri Kaydet
+        </button>
+        <button type="button" (click)="openChangePassword()" style="width: 60%"
+                class="btn btn-lg btn-danger mx-auto p-2 my-5">Şifreyi Güncelle
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
