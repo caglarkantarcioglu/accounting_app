@@ -1,7 +1,9 @@
 # Accounting App
 ### *Project Information*:
- - Frontend: Angular Framework <img alt="JavaScript" width="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png" />
+ - Frontend: Angular Framework <img alt="JavaScript" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png" />
+ #####
  - API: NestJS <img src="https://nestjs.com/img/logo_text.svg" align="center" height="30px" width="auto" alt="Nest Logo" />
+ #####
  - Database: PostgreSQL <img align="center" alt="JavaScript" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png" />
    #
 
