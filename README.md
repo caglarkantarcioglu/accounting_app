@@ -19,11 +19,19 @@ ___
 ##
 ### Some Images from the Application
 <img align="center" alt="app-image-1" src="app-images/1.png" width="800" height="auto">
+
 ##
+
 <img align="center" alt="app-image-1" src="app-images/2.png" width="800" height="auto">
+
 ##
+
 <img align="center" alt="app-image-1" src="app-images/3.png" width="800" height="auto">
+
 ##
+
 <img align="center" alt="app-image-1" src="app-images/4.png" width="800" height="auto">
+
 ##
+
 <img align="center" alt="app-image-1" src="app-images/5.png" width="800" height="auto">
