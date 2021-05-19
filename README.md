@@ -8,7 +8,9 @@
  - Database: PostgreSQL <img align="center" alt="JavaScript" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png" />
   #####
 - In Project Photos: Unsplash
-   #
+ 
+ <br />
+ <br />
 
 ### *Project Features*:
  - Save and List Expenses and Incomes
